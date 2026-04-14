@@ -46,11 +46,11 @@ h2, h3 {
 header {
     background-color: var(--color-blanco);
     padding: 15px 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--color-gris-claro);
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px var(--color-gris-claro);
 }
 
 .nav-container {
@@ -139,7 +139,7 @@ nav ul li a:hover { color: var(--color-dorado); }
     width: 95px;
     height: auto;
     margin-right: 20px;
-    background: transparent !important;
+    background: none;
 }
 
 .icon-right { width: 125px; }
@@ -165,7 +165,7 @@ nav ul li a:hover { color: var(--color-dorado); }
 
 .card {
     background-color: var(--color-blanco);
-    border: 1px solid #eee;
+    border: 1px solid var(--color-gris-claro);
     padding: 20px;
     border-radius: 8px;
     flex: 1;
@@ -231,7 +231,7 @@ nav ul li a:hover { color: var(--color-dorado); }
 .form-group input, .form-group textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-gris-claro);
     border-radius: 4px;
     font-family: inherit;
 }
@@ -249,6 +249,6 @@ nav ul li a:hover { color: var(--color-dorado); }
 
 footer {
     background-color: var(--color-oscuro);
-    color: #999;
+    color: var(--color-gris-claro);
     padding: 60px 0;
 }
