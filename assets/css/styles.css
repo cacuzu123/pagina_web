@@ -91,8 +91,7 @@ nav ul li a {
 nav ul li a:hover { color: var(--color-dorado); }
 
 .banner {
-    background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
-                url('../img/cafeteria.jpg') no-repeat center center/cover;
+    background: url('../img/cafeteria.jpg') no-repeat center center/cover;
     height: 75vh;
     display: flex;
     align-items: center;
@@ -101,8 +100,13 @@ nav ul li a:hover { color: var(--color-dorado); }
 
 .banner h2 {
     font-size: 3.5rem;
-    color: var(--color-marron);
+    color: var(--color-blanco); 
     margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.banner p {
+    color: var(--color-crema);
 }
 
 .btn-primary {
@@ -117,8 +121,7 @@ nav ul li a:hover { color: var(--color-dorado); }
 }
 
 .mini-banner-stats {
-    background: linear-gradient(rgba(75,54,33,0.85), rgba(75,54,33,0.85)), 
-                url('../img/granos.jpg') no-repeat center center/cover;
+    background: url('../img/granos.jpg') no-repeat center center/cover;
     padding: 55px 0;
     color: var(--color-blanco);
 }
