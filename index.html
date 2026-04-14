@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aroma & Grano | Cafetería</title>
+    <title>Aroma & Grano | Cafetería de Especialidad</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
     <header>
-        <div class="container nav-flex">
+        <div class="container nav-container">
             <div class="logo">
-                <h1>Aroma<span>&Grano</span></h1>
+                <a href="index.html">
+                    <img src="assets/img/logo.png" alt="Aroma & Grano Logo" class="header-logo">
+                    <h1>Aroma<span>&Grano</span></h1>
+                </a>
             </div>
             <nav>
                 <ul>
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#historia">Nosotros</a></li>
                     <li><a href="#cafes">Cafés</a></li>
                     <li><a href="#equipo">Equipo</a></li>
                     <li><a href="#contacto">Contacto</a></li>
@@ -27,80 +30,132 @@
 
     <main>
         <section class="banner">
-            <div class="container banner-texto">
-                <h2>El despertar que tu día necesita</h2>
-                <p>Granos seleccionados de las mejores fincas.</p>
-                <a href="#contacto" class="boton">Reservar Mesa</a>
-            </div>
-        </section>
-
-        <section id="nosotros" class="seccion">
             <div class="container">
-                <h3>Nuestra Historia</h3>
-                <p>Desde 2015, rescatamos la esencia del café peruano directamente desde Chanchamayo.</p>
+                <h2>El despertar que tu día necesita</h2>
+                <p>Granos seleccionados de las mejores fincas para una experiencia única.</p>
+                <a href="#contacto" class="btn-primary">Reservar Mesa</a>
             </div>
         </section>
 
-        <section id="cafes" class="seccion bg-crema">
+        <section id="historia" class="section-padding">
+            <div class="container text-center">
+                <h3>Nuestra Historia</h3>
+                <p>Desde 2015, rescatamos la esencia del café peruano, trabajando directamente con agricultores de <strong>Chanchamayo</strong> para traer el mejor grano a Lima.</p>
+            </div>
+        </section>
+
+        <section class="mini-banner-stats">
+            <div class="container grid-equidistante">
+                
+                <div class="stat-item">
+                    <div class="stat-content">
+                        <img src="assets/img/icono1.png" alt="Experiencia" class="stat-icon-large">
+                        <div class="stat-text-group">
+                            <h2 class="stat-number-large">10+</h2>
+                            <p class="stat-label-large">Años de Experiencia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-content">
+                        <img src="assets/img/icono2.png" alt="Servicio" class="stat-icon-large">
+                        <div class="stat-text-group">
+                            <h2 class="stat-number-large">50K</h2>
+                            <p class="stat-label-large">Tazas Servidas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-content">
+                        <img src="assets/img/icono3.png" alt="Calidad" class="stat-icon-large icon-right">
+                        <div class="stat-text-group">
+                            <h2 class="stat-number-large">100%</h2>
+                            <p class="stat-label-large">Café Orgánico</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="cafes" class="bg-light section-padding">
             <div class="container">
                 <h3 class="text-center">Especialidades de la Casa</h3>
-                <div class="flex-columnas">
-                    <article class="tarjeta">
+                <div class="grid-3">
+                    <article class="card">
                         <img src="assets/img/expresso.jpg" alt="Café Expresso">
-                        <h4>Expresso Intenso</h4>
-                        <p>Puro y potente.</p>
+                        <div class="card-body">
+                            <h4>Expresso Intenso</h4>
+                            <p>La base de todo nuestro sabor, puro y potente.</p>
+                        </div>
                     </article>
-                    <article class="tarjeta">
-                        <img src="assets/img/latte.jpg" alt="Café Latte">
-                        <h4>Latte Art</h4>
-                        <p>Textura cremosa con leche fresca.</p>
+                    <article class="card">
+                        <img src="assets/img/latte.jpg" alt="Café Latte Art">
+                        <div class="card-body">
+                            <h4>Latte Art</h4>
+                            <p>Suavidad y textura cremosa con leche fresca.</p>
+                        </div>
                     </article>
-                    <article class="tarjeta">
-                        <img src="assets/img/postre.jpg" alt="Postres">
-                        <h4>Repostería</h4>
-                        <p>Hechos en casa diariamente.</p>
+                    <article class="card">
+                        <img src="assets/img/postre.jpg" alt="Repostería">
+                        <div class="card-body">
+                            <h4>Repostería</h4>
+                            <p>Acompaña tu café con nuestros postres hechos en casa.</p>
+                        </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="equipo" class="seccion">
+        <section id="equipo" class="section-padding">
             <div class="container text-center">
-                <h3>Nuestros Baristas</h3>
-                <p>Expertos certificados en cada gota.</p>
+                <h3>Expertos en cada gota</h3>
+                <div class="grid-equidistante">
+                    <div class="barista">
+                        <img src="assets/img/barista1.jpg" alt="Sofía López" class="img-circle">
+                        <h5>Sofía López</h5>
+                    </div>
+                    <div class="barista">
+                        <img src="assets/img/barista2.jpg" alt="Andrés Ruiz" class="img-circle">
+                        <h5>Andrés Ruiz</h5>
+                    </div>
+                    <div class="barista">
+                        <img src="assets/img/barista3.jpg" alt="Carlos Tenorio" class="img-circle">
+                        <h5>Carlos Tenorio</h5>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="seccion bg-marron text-blanco">
-            <div class="container text-center">
+        <section class="section-padding bg-dark text-white text-center">
+            <div class="container">
                 <h3>Del Grano a la Taza</h3>
-                <video controls width="500">
+                <video controls width="100%" class="video-proceso">
                     <source src="assets/video/proceso_cafe.mp4" type="video/mp4">
                     Tu navegador no soporta video.
                 </video>
             </div>
         </section>
 
-        <section id="contacto" class="seccion bg-crema">
+        <section id="contacto" class="bg-light section-padding">
             <div class="container">
                 <h3 class="text-center">Contáctanos</h3>
-                <form class="formulario">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-
-                    <label for="email">Correo:</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="preferencia">Café favorito:</label>
-                    <select id="preferencia">
-                        <option value="espresso">Espresso</option>
-                        <option value="latte">Latte</option>
-                    </select>
-
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" rows="4"></textarea>
-
-                    <button type="submit" class="boton-enviar">Enviar</button>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
                 </form>
             </div>
         </section>
