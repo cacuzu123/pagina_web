@@ -39,7 +39,7 @@ body {
 h2, h3 {
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-weight: 700;
 }
 
@@ -75,14 +75,9 @@ header {
     color: var(--color-marron);
 }
 
-.logo h1 span {
-    color: var(--color-dorado);
-}
+.logo h1 span { color: var(--color-dorado); }
 
-nav ul {
-    display: flex;
-    list-style: none;
-}
+nav ul { display: flex; list-style: none; }
 
 nav ul li a {
     text-decoration: none;
@@ -93,9 +88,7 @@ nav ul li a {
     transition: 0.3s;
 }
 
-nav ul li a:hover {
-    color: var(--color-dorado);
-}
+nav ul li a:hover { color: var(--color-dorado); }
 
 .banner {
     background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
@@ -149,14 +142,9 @@ nav ul li a:hover {
     background: transparent !important;
 }
 
-.icon-right {
-    width: 125px; 
-}
+.icon-right { width: 125px; }
 
-.stat-text-group {
-    display: flex;
-    flex-direction: column;
-}
+.stat-text-group { display: flex; flex-direction: column; }
 
 .stat-number-large {
     font-size: 4rem;
@@ -190,10 +178,6 @@ nav ul li a:hover {
     border-radius: 4px;
 }
 
-.card-body {
-    padding: 20px 0;
-}
-
 .img-circle {
     width: 200px;
     height: 200px;
@@ -202,6 +186,30 @@ nav ul li a:hover {
     border: 6px solid var(--color-gris-claro);
     margin: 0 auto 20px auto;
     display: block;
+}
+
+/* Estilos de Testimonios (Sesión 2) */
+.testimonial-card {
+    max-width: 800px;
+    margin: auto;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--color-marron);
+}
+
+.testimonial-card cite {
+    display: block;
+    margin-top: 15px;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--color-oscuro);
+    font-size: 1rem;
+}
+
+.video-proceso {
+    max-width: 800px;
+    border-radius: 8px;
+    margin-top: 20px;
 }
 
 .contact-form {
@@ -237,7 +245,6 @@ nav ul li a:hover {
     border-radius: 4px;
     cursor: pointer;
     font-weight: 700;
-    font-size: 1rem;
 }
 
 footer {
