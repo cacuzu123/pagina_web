@@ -1,0 +1,114 @@
+/* 1. Variables CSS (Sesión 2) */
+:root {
+    --cafe-marron: #4b3621;
+    --cafe-dorado: #c0a080;
+    --fondo-crema: #f5f5dc;
+    --blanco: #ffffff;
+    --negro: #333333;
+}
+
+/* 2. Estilos de Etiqueta (Sesión 1) */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--negro);
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* 3. Clases de Utilidad (Sesión 2) */
+.seccion { padding: 60px 0; }
+.bg-crema { background-color: var(--fondo-crema); }
+.bg-marron { background-color: var(--cafe-marron); }
+.text-blanco { color: var(--blanco); }
+.text-center { text-align: center; }
+
+/* 4. Navegación con Flexbox (Sesión 2) */
+header {
+    background-color: var(--blanco);
+    padding: 20px 0;
+    border-bottom: 2px solid var(--cafe-marron);
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--negro);
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+/* 5. Banner (Sesión 1 y 2) */
+.banner {
+    background-color: var(--negro);
+    color: var(--blanco);
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* 6. Estilos de Tarjetas (Sesión 1) */
+.flex-columnas {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tarjeta {
+    background-color: var(--blanco);
+    padding: 15px;
+    border-radius: 10px; /* Sesión 1 */
+    flex: 1;
+}
+
+.tarjeta img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* 7. Formulario (Sesión 3) */
+.formulario {
+    width: 300px; /* Sesión 3, pág 15 */
+    margin: auto;
+}
+
+.formulario input, .formulario select, .formulario textarea {
+    width: 100%; /* Sesión 3, pág 15 */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--cafe-dorado);
+}
+
+.boton-enviar {
+    background-color: var(--cafe-marron);
+    color: var(--blanco);
+    padding: 10px;
+    width: 100%;
+    border: none;
+}
+
+/* Footer (Sesión 2) */
+footer {
+    background-color: var(--cafe-marron);
+    color: var(--blanco);
+    padding: 30px 0;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma & Grano | Cafetería</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <div class="logo">
+                <h1>Aroma<span>&Grano</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#cafes">Cafés</a></li>
+                    <li><a href="#equipo">Equipo</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner">
+            <div class="container banner-texto">
+                <h2>El despertar que tu día necesita</h2>
+                <p>Granos seleccionados de las mejores fincas.</p>
+                <a href="#contacto" class="boton">Reservar Mesa</a>
+            </div>
+        </section>
+
+        <section id="nosotros" class="seccion">
+            <div class="container">
+                <h3>Nuestra Historia</h3>
+                <p>Desde 2015, rescatamos la esencia del café peruano directamente desde Chanchamayo.</p>
+            </div>
+        </section>
+
+        <section id="cafes" class="seccion bg-crema">
+            <div class="container">
+                <h3 class="text-center">Especialidades de la Casa</h3>
+                <div class="flex-columnas">
+                    <article class="tarjeta">
+                        <img src="assets/img/expresso.jpg" alt="Café Expresso">
+                        <h4>Expresso Intenso</h4>
+                        <p>Puro y potente.</p>
+                    </article>
+                    <article class="tarjeta">
+                        <img src="assets/img/latte.jpg" alt="Café Latte">
+                        <h4>Latte Art</h4>
+                        <p>Textura cremosa con leche fresca.</p>
+                    </article>
+                    <article class="tarjeta">
+                        <img src="assets/img/postre.jpg" alt="Postres">
+                        <h4>Repostería</h4>
+                        <p>Hechos en casa diariamente.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="equipo" class="seccion">
+            <div class="container text-center">
+                <h3>Nuestros Baristas</h3>
+                <p>Expertos certificados en cada gota.</p>
+            </div>
+        </section>
+
+        <section class="seccion bg-marron text-blanco">
+            <div class="container text-center">
+                <h3>Del Grano a la Taza</h3>
+                <video controls width="500">
+                    <source src="assets/video/proceso_cafe.mp4" type="video/mp4">
+                    Tu navegador no soporta video.
+                </video>
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion bg-crema">
+            <div class="container">
+                <h3 class="text-center">Contáctanos</h3>
+                <form class="formulario">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Correo:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="preferencia">Café favorito:</label>
+                    <select id="preferencia">
+                        <option value="espresso">Espresso</option>
+                        <option value="latte">Latte</option>
+                    </select>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" rows="4"></textarea>
+
+                    <button type="submit" class="boton-enviar">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 Aroma & Grano - Todos los derechos reservados.</p>
+            <p>Calle Alcanfores 456, Miraflores.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
