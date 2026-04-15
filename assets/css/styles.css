@@ -1,3 +1,8 @@
+/* ==========================================================
+   CONFIGURACIÓN DE IDENTIDAD (VARIABLES)
+   Centralizamos los valores para mantener la coherencia. 
+   Si se cambia un color aquí, se refleja en toda la web.
+   ========================================================== */
 :root {
     --color-marron: #4b3621;
     --color-dorado: #c0a080;
@@ -5,29 +10,44 @@
     --color-oscuro: #1a1a1a;
     --color-blanco: #ffffff;
     --color-gris-claro: #f4f4f4;
-    --fuente-principal: 'Roboto', 'Segoe UI', Tahoma, sans-serif;
+    --fuente-principal: 'Roboto', sans-serif;
 }
 
+/* ==========================================================
+   RESETEO Y REGLAS BASE
+   Aseguramos que la web se vea igual en todos los navegadores.
+   ========================================================== */
 * {
     margin: 0;
     padding: 0;
+    /* Evita que el tamaño de los elementos crezca al añadirles padding o bordes.
+       Mantiene el cálculo del ancho exacto según lo definido. */
     box-sizing: border-box;
 }
 
 body {
+    /* Definimos la tipografía global que heredarán todos los textos */
     font-family: var(--fuente-principal);
+    /* Establece el espacio entre líneas para que los párrafos sean legibles */
     line-height: 1.6;
     color: var(--color-oscuro);
     background-color: var(--color-blanco);
 }
 
+/* ==========================================================
+   ESTRUCTURA Y DISEÑO DE BLOQUES
+   Clases reutilizables para organizar el contenido.
+   ========================================================== */
 .container {
+    /* Limitamos el ancho para que el contenido no se pierda en monitores anchos */
     width: 85%;
     max-width: 1200px;
+    /* margin: auto centra la caja horizontalmente al repartir el espacio sobrante */
     margin: auto;
 }
 
 .section-padding {
+    /* Genera un 'colchón' de aire arriba y abajo para separar visualmente las secciones */
     padding: 100px 0;
 }
 
@@ -38,24 +58,34 @@ body {
 
 h2, h3 {
     text-transform: uppercase;
+    /* Agrega aire entre letras para mejorar la estética visual de los títulos */
     letter-spacing: 1px;
     margin-bottom: 25px;
     font-weight: 700;
 }
 
+/* ==========================================================
+   NAVEGACIÓN (HEADER)
+   ========================================================== */
 header {
     background-color: var(--color-blanco);
     padding: 15px 0;
     border-bottom: 1px solid var(--color-gris-claro);
+    /* Mantiene el menú fijo en la parte superior del navegador al hacer scroll */
     position: sticky;
     top: 0;
+    /* Define la jerarquía de capas; asegura que el menú esté siempre al frente */
     z-index: 1000;
+    /* Agrega una sombra sutil para despegar el menú visualmente del contenido */
     box-shadow: 0 2px 5px var(--color-gris-claro);
 }
 
 .nav-container {
+    /* Activa el modelo de caja flexible para alinear elementos en una fila */
     display: flex;
+    /* Empuja los elementos a los extremos opuestos (Logo vs Menú) */
     justify-content: space-between;
+    /* Alinea verticalmente los elementos al centro de la barra */
     align-items: center;
 }
 
@@ -66,6 +96,7 @@ header {
 }
 
 .header-logo {
+    /* Controlamos la altura para que el logo no deforme el alto del header */
     height: 50px;
     margin-right: 15px;
 }
@@ -77,7 +108,11 @@ header {
 
 .logo h1 span { color: var(--color-dorado); }
 
-nav ul { display: flex; list-style: none; }
+nav ul { 
+    display: flex; 
+    /* Elimina las viñetas o puntos automáticos de las listas HTML */
+    list-style: none; 
+}
 
 nav ul li a {
     text-decoration: none;
@@ -85,41 +120,54 @@ nav ul li a {
     padding: 0 15px;
     font-weight: 700;
     font-size: 0.9rem;
+    /* Genera una transición suave de 0.3 segundos al cambiar el color en hover */
     transition: 0.3s;
 }
 
 nav ul li a:hover { color: var(--color-dorado); }
 
+/* ==========================================================
+   BANNER PRINCIPAL (HERO)
+   ========================================================== */
 .banner {
+    /* Ajusta la imagen al fondo. 'cover' hace que cubra todo el espacio sin deformarse */
     background: url('../img/cafeteria.jpg') no-repeat center center/cover;
+    /* 75vh significa que la sección siempre medirá el 75% del alto de la pantalla */
     height: 75vh;
+    /* Flexbox aquí se usa para centrar el texto vertical y horizontalmente */
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
+}
+
+.banner h2, .banner p {
+    color: var(--color-blanco);
+    /* Sombra de texto para garantizar que las letras sean legibles sobre la foto */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .banner h2 {
     font-size: 3.5rem;
-    color: var(--color-blanco); 
     margin-bottom: 10px;
-    font-weight: 700;
-}
-
-.banner p {
-    color: var(--color-crema);
 }
 
 .btn-primary {
+    /* Permite aplicar dimensiones y márgenes a un elemento que originalmente es de línea */
     display: inline-block;
     background-color: var(--color-marron);
     color: var(--color-blanco);
     padding: 15px 35px;
     text-decoration: none;
+    /* Redondea las esquinas del botón para un diseño más moderno */
     border-radius: 4px;
     margin-top: 25px;
     font-weight: 700;
 }
 
+/* ==========================================================
+   ESTADÍSTICAS (LOGICA DE EQUIDISTANCIA)
+   ========================================================== */
 .mini-banner-stats {
     background: url('../img/granos.jpg') no-repeat center center/cover;
     padding: 55px 0;
@@ -128,8 +176,11 @@ nav ul li a:hover { color: var(--color-dorado); }
 
 .grid-equidistante {
     display: flex;
+    /* EXPLICACIÓN EQUIDISTANTE: Distribuye los elementos repartiendo el espacio 
+       sobrante alrededor de cada uno, logrando que la separación sea uniforme */
     justify-content: space-around;
     align-items: center;
+    /* Permite que los elementos bajen a la siguiente línea si no caben en pantallas chicas */
     flex-wrap: wrap;
 }
 
@@ -142,26 +193,21 @@ nav ul li a:hover { color: var(--color-dorado); }
     width: 95px;
     height: auto;
     margin-right: 20px;
-    background: none;
 }
-
-.icon-right { width: 125px; }
-
-.stat-text-group { display: flex; flex-direction: column; }
 
 .stat-number-large {
     font-size: 4rem;
+    /* Reduce el espacio vertical del número para que el texto de abajo se pegue más */
     line-height: 1;
     margin-bottom: 5px;
 }
 
-.stat-label-large {
-    font-size: 1.1rem;
-    text-transform: uppercase;
-}
-
+/* ==========================================================
+   PRODUCTOS Y EQUIPO (LOGICA DE CÍRCULOS)
+   ========================================================== */
 .grid-3 {
     display: flex;
+    /* Define el espacio exacto de separación entre cada columna de la grilla */
     gap: 30px;
     margin-top: 50px;
 }
@@ -171,28 +217,37 @@ nav ul li a:hover { color: var(--color-dorado); }
     border: 1px solid var(--color-gris-claro);
     padding: 20px;
     border-radius: 8px;
+    /* Hace que todas las tarjetas ocupen el mismo ancho proporcional dentro del flex */
     flex: 1;
 }
 
 .card img {
     width: 100%;
     height: 250px;
+    /* Mantiene la proporción de la imagen recortando los excesos para que no se vea estirada */
     object-fit: cover;
     border-radius: 4px;
 }
 
 .img-circle {
+    /* EXPLICACIÓN CÍRCULOS: Necesitamos dimensiones iguales (cuadrado) */
     width: 200px;
     height: 200px;
+    /* Al poner el radio al 50%, las esquinas se redondean hasta encontrarse en el centro */
     border-radius: 50%;
+    /* Asegura que la cara del barista se vea bien dentro del círculo sin deformarse */
     object-fit: cover;
     border: 6px solid var(--color-gris-claro);
+    /* Centra la imagen dentro de su caja y le da espacio inferior */
     margin: 0 auto 20px auto;
     display: block;
 }
 
-/* Estilos de Testimonios (Sesión 2) */
+/* ==========================================================
+   TESTIMONIOS Y MULTIMEDIA
+   ========================================================== */
 .testimonial-card {
+    /* Limita el ancho máximo para evitar que las líneas de texto sean demasiado largas */
     max-width: 800px;
     margin: auto;
     font-style: italic;
@@ -201,12 +256,14 @@ nav ul li a:hover { color: var(--color-dorado); }
 }
 
 .testimonial-card cite {
+    /* Convierte el elemento en bloque para que el nombre aparezca debajo del texto */
     display: block;
     margin-top: 15px;
     font-weight: 700;
-    font-style: normal;
     color: var(--color-oscuro);
     font-size: 1rem;
+    /* Resetea el itálico del padre para que el nombre se vea recto (normal) */
+    font-style: normal;
 }
 
 .video-proceso {
@@ -215,6 +272,58 @@ nav ul li a:hover { color: var(--color-dorado); }
     margin-top: 20px;
 }
 
+/* ==========================================================
+   ESTILOS DE LA TABLA
+   ========================================================== */
+   
+.tbl-horario {
+    width: 100%;
+    /* Une los bordes de las celdas para que se vean como una sola línea fina */
+    border-collapse: collapse;
+    background-color: var(--color-blanco);
+    margin-top: 30px;
+}
+
+.tbl-horario th, 
+.tbl-horario td {
+    /* Espacio interno para que el texto no choque con los bordes */
+    padding: 15px;
+    border: 1px solid var(--color-gris-claro);
+    text-align: center;
+}
+
+.tbl-horario th {
+    background-color: var(--color-marron);
+    color: var(--color-blanco);
+    text-transform: uppercase;
+}
+
+/* Aplica un color de fondo a las filas pares para facilitar la lectura */
+.tbl-horario tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tbl-horario tfoot td {
+    background-color: var(--color-gris-claro);
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #666;
+    /* Alineación al centro solicitada para el pie de tabla */
+    text-align: center;
+    font-weight: bold;
+}
+
+.tbl-horario caption {
+    /* Estilo para el título superior de la tabla */
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--color-marron);
+    text-align: left;
+}
+
+/* ==========================================================
+   FORMULARIO Y FOOTER
+   ========================================================== */
 .contact-form {
     max-width: 600px;
     margin: auto;
@@ -222,7 +331,6 @@ nav ul li a:hover { color: var(--color-dorado); }
 
 .form-group {
     margin-bottom: 20px;
-    text-align: left;
 }
 
 .form-group label {
@@ -236,6 +344,7 @@ nav ul li a:hover { color: var(--color-dorado); }
     padding: 12px;
     border: 1px solid var(--color-gris-claro);
     border-radius: 4px;
+    /* Fuerza al campo a usar la fuente del body en lugar de la del sistema */
     font-family: inherit;
 }
 
@@ -244,8 +353,10 @@ nav ul li a:hover { color: var(--color-dorado); }
     color: var(--color-blanco);
     padding: 15px;
     width: 100%;
+    /* Elimina el borde por defecto de los botones HTML */
     border: none;
     border-radius: 4px;
+    /* Cambia el cursor a una mano para indicar que es clickeable */
     cursor: pointer;
     font-weight: 700;
 }
